@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 const ThankYouPage = () => {
   // const [isModalOpen, setIsModalOpen] = useState(false);
   return (
-    <div className="flex items-center justify-center min-h-screen bg-[#f9f6f1] px-6">
+    <div className="flex items-center justify-center min-h-screen bg-[#003153]/10 px-6">
       <div className="bg-white shadow-lg rounded-2xl p-8 max-w-xl text-center">
-        <h1 className="text-3xl font-bold text-[#997736] mb-4">
+        <h1 className="text-3xl font-bold text-[#003153] mb-4">
           Thank you for your enquiry!
         </h1>
         <p className="text-gray-700 mb-6">
@@ -37,7 +37,7 @@ const ThankYouPage = () => {
 
         <Link
           to="/"
-          className="inline-block font-semibold border-2 rounded-md border-[#997736] text-[#997736] hover:text-white px-6 py-2 hover:bg-[#997736] transition"
+          className="inline-block font-semibold border-2 text-md rounded-md border-[#003153] text-[#003153] hover:text-white px-6 py-2 hover:bg-[#003153] transition"
         >
           Back to Home
         </Link>

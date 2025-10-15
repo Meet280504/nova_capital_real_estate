@@ -37,7 +37,7 @@ function BrochureButton({ isScrolled, onClick, className = '', variant = 'defaul
   );
 }
 
-export default function Navbar() {
+export default function NavbarMain() {
   const { openModal } = useEnquiryModal();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -66,7 +66,7 @@ export default function Navbar() {
       <nav
         className={`fixed top-0 left-0 w-full z-50 font-bold transition-all duration-300 ${isScrolled
           ? 'bg-white shadow-md text-[#003153]'
-          : 'bg-[#003153] text-white'
+          : 'bg-transparent text-white'
           }`}
       >
         <div className="container mx-auto flex items-center justify-between md:justify-center lg:justify-center px-4 py-1">

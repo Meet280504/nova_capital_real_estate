@@ -7,13 +7,13 @@ export default function PrivacyPolicy() {
         {/* Logo + Phone */}
         <div className="flex md:flex-row flex-col gap-4 items-center justify-between mb-8">
           <img
-            src="../Assets/logo_.webp"
+            src="../Assets/project_logo.webp"
             alt="Logo"
-            className="w-44 h-auto"
+            className="w-60 h-auto"
           />
           <a
             href="tel:+971527195327"
-            className="flex items-center space-x-2 text-white bg-[#997736] hover:bg-[#997736]/70 px-4 py-2 rounded-md shadow"
+            className="flex items-center space-x-2 text-white bg-[#003153] hover:bg-[#003153]/70 px-4 py-2 rounded-md shadow"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

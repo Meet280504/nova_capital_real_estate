@@ -60,23 +60,23 @@ const EnquiryModal = ({ onClose }) => {
       e.target.reset();
       setConsentChecked(false);
       onClose();
-      navigate("/thankyou");
+      navigate("/thankyou.html");
     }
   };
 
   return (
     <>
       <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
-        <div className="bg-black text-white p-8 rounded-xl w-full max-w-md relative shadow-xl">
+        <div className="bg-[#ffffff] text-[#003153] p-8 rounded-xl w-full max-w-md relative shadow-xl">
           {/* Close Button */}
           <button
             onClick={onClose}
-            className="absolute top-3 right-3 text-gray-400 hover:text-white"
+            className="absolute top-3 right-3 text-[#003153] hover:text-[#003153]/80"
           >
             <X className="w-5 h-5" />
           </button>
 
-          <h2 className="text-xl font-semibold mb-6 tracking-wide text-[#997736]">
+          <h2 className="text-xl font-semibold mb-6 tracking-wide text-[#003153]">
             ENQUIRE NOW
           </h2>
 
@@ -86,7 +86,7 @@ const EnquiryModal = ({ onClose }) => {
               type="text"
               name="name"
               placeholder="Name"
-              className="w-full px-4 py-3 rounded-md bg-transparent border border-gray-600 focus:border-[#997736] outline-none"
+              className="w-full px-4 py-3 rounded-md bg-transparent text-[#003153] border border-[#003153] focus:border-[#003153] outline-none"
               required
             />
 
@@ -102,7 +102,7 @@ const EnquiryModal = ({ onClose }) => {
               }}
               inputProps={{ name: "phone", required: true, id: "phone" }}
               containerClass="w-full"
-              inputClass="!w-full !bg-transparent !text-white !py-3 !pl-12 !pr-3 !rounded-md !border !border-gray-600 focus:!border-[#997736] !outline-none"
+              inputClass="!w-full !bg-transparent !text-[#003153] !py-3 !pl-12 !pr-3 !rounded-md !border !border-[#003153] focus:!border-[#003153] !outline-none"
               buttonClass="!bg-gray-800 !border-none !rounded-l-md"
               dropdownClass="!bg-black !text-white"
               searchClass="!bg-black !text-white"
@@ -114,7 +114,7 @@ const EnquiryModal = ({ onClose }) => {
               type="email"
               name="email"
               placeholder="Email"
-              className="w-full px-4 py-3 rounded-md bg-transparent border border-gray-600 focus:border-[#997736] outline-none"
+              className="w-full px-4 py-3 rounded-md bg-transparent text-[#003153] border border-[#003153] focus:border-[#003153] outline-none"
             // required
             />
 
@@ -125,18 +125,18 @@ const EnquiryModal = ({ onClose }) => {
                 id="consent"
                 checked={consentChecked}
                 onChange={(e) => setConsentChecked(e.target.checked)}
-                className="mt-1 w-4 h-4 accent-[#997736] cursor-pointer"
+                className="mt-1 w-4 h-4 accent-[#003153] cursor-pointer"
                 required
               />
               <label
                 htmlFor="consent"
-                className="text-xs text-gray-400 leading-relaxed cursor-pointer"
+                className="text-xs text-[#003153] leading-relaxed cursor-pointer"
               >
                 I consent to the processing of provided data according to the{" "}
                 <Link
                   to="/privacy-policy"
                   onClick={onClose}
-                  className="underline hover:text-white"
+                  className="underline hover:text-[#003153]/80"
                 >
                   Privacy Policy | Terms & Conditions
                 </Link>{" "}
@@ -149,7 +149,7 @@ const EnquiryModal = ({ onClose }) => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-[#997736] hover:bg-[#997736]/70 text-black font-semibold py-3 rounded-md transition"
+              className="w-full bg-[#003153] hover:bg-[#004d66] text-white text-md font-semibold py-3 rounded-md transition"
               disabled={loading}
             >
               {loading ? "Submitting..." : "SUBMIT"}

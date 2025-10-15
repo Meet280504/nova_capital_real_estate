@@ -3,20 +3,17 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
-import TextCarousel from "./components/TextCarousel";
-import LuxuryPage from "./components/LuxuryPage";
-import AmenitiesCarousel from "./components/Amenity";
-import GalleryCarousel from "./components/Gallery";
-import Invest from "./components/Invest";
 import { EnquiryModalProvider } from "./components/EnquiryModal";
-import LocationSection from "./components/Location";
-import LayoutSection from "./components/LayoutSection";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import ThankYouPage from "./components/ThankyouPage";
 import PriceSection from "./components/Pricing";
-import PaymentPlan from "./components/PaymentPlan";
+import Areas from "./components/Areas";
+import OffPlanProjects from "./components/OffPlanProjects";
+import FirstTimeBuyer from "./components/Homebuyer";
+import Developer from "./components/Developer";
+import Contact from "./components/Contact";
+import CardPage from "./components/PricingCardPage";
 import "./App.css";
-import Waitlist from "./components/Waitlist";
 
 // DemoButton to test modal anywhere
 // function DemoButton() {
@@ -33,21 +30,14 @@ import Waitlist from "./components/Waitlist";
 
 function AppContent() {
   return (
-    <div className="font-sans">
+    <div className="">
       <Navbar />
       <Banner />
-      <TextCarousel />
-      <LuxuryPage />
-      <PriceSection />
-      <PaymentPlan />
-      <LayoutSection />
-      <AmenitiesCarousel />
-      <GalleryCarousel />
-      <LocationSection />
-      <Waitlist />
-      <Invest />
+      <PriceSection />                   
+      <OffPlanProjects />
+      <Areas />
+      <FirstTimeBuyer />
       <Footer />
-
       {/* Example Demo Button for testing modal anywhere */}
       {/* <div className="fixed bottom-4 right-4 z-50">
         <DemoButton />
@@ -62,9 +52,16 @@ function App() {
       {/* <AppContent /> */}
       {/* <Router> */}
         <Routes>
-          <Route path="/" element={<AppContent />} />
+          {/* <Route path="/" element={<AppContent />} /> */}
+          <Route path="/" element={<Banner />} />
+          <Route path="/pricing" element={<PriceSection />} />
+          <Route path="/property/:id" element={<CardPage />} />
+          <Route path="/new-projects" element={<OffPlanProjects />} />
+          <Route path="/areas" element={<Areas />} />
+          <Route path="/developer" element={<Developer />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/thankyou" element={<ThankYouPage />} />
+          <Route path="/thankyou.html" element={<ThankYouPage />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       {/* </Router>/ */}
     </EnquiryModalProvider>

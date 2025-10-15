@@ -20,14 +20,17 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import "./index.css";
 import "aos/dist/aos.css";
 import "remixicon/fonts/remixicon.css";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>   {/* ✅ Wrap App with BrowserRouter */}
-      <App />
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>   {/* ✅ Wrap App with BrowserRouter */}
+        <App />
+      </BrowserRouter>
+    </HelmetProvider>
   </React.StrictMode>
 );

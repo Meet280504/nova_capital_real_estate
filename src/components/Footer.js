@@ -36,13 +36,13 @@ const Footer = () => {
     if (result) {
       e.target.reset();
       setConsentChecked(false);
-      navigate("/thankyou"); 
+      navigate("/thankyou.html"); 
     }
   };
 
   return (
     <div>
-      <footer id="contact" className="w-full bg-[#997736] p-6 sm:p-8 lg:p-10">
+      <footer id="contact" className="w-full bg-[#003153] p-6 sm:p-8 lg:p-10">
         <div className="container mx-auto">
           {/* Desktop Footer */}
           <div className="hidden lg:flex flex-col items-center">
@@ -60,7 +60,7 @@ const Footer = () => {
                   type="text"
                   name="name"
                   placeholder="Enter your name"
-                  className="h-[48px] p-3 rounded-lg bg-white border border-gray-300 focus:border-[#997736] outline-none w-full"
+                  className="h-[48px] p-3 rounded-lg bg-white border-2 border-[#003153] focus:border-[#003153] outline-none w-full"
                   required
                 />
               </div>
@@ -81,7 +81,7 @@ const Footer = () => {
                   }}
                   inputProps={{ name: "phone", required: true }}
                   containerClass="w-full"
-                  inputClass="!w-full !h-[48px] !pl-12 !pr-3 !rounded-lg !bg-white !text-black !border !border-gray-300 focus:!border-[#997736] !outline-none placeholder:!text-gray-400"
+                  inputClass="!w-full !h-[48px] !pl-12 !pr-3 !rounded-lg !bg-white !text-black !border-2 !border-[#003153] focus:!border-[#003153] !outline-none placeholder:!text-gray-400"
                   buttonClass="!h-[48px] !flex !items-center !justify-center !bg-gray-200 !border-none !rounded-l-lg "
                   dropdownClass="!bg-white !text-black"
                   searchClass="!bg-white !text-black"
@@ -99,14 +99,14 @@ const Footer = () => {
                   type="email"
                   name="email"
                   placeholder="Enter your email"
-                  className="h-[48px] p-3 rounded-lg bg-white border border-gray-300 focus:border-[#997736] outline-none w-full"
+                  className="h-[48px] p-3 rounded-lg bg-white border-2 border-[#003153] focus:border-[#003153] outline-none w-full"
                   // required
                 />
               </div>
 
               <button
                 type="submit"
-                className="bg-[#b38e5d] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#a07e4d] transition-colors h-fit"
+                className="bg-[#003153] text-[#ffffff] border-2 border-white px-8 py-2.5 rounded-lg font-bold hover:text-[#003153] hover:bg-white transition-colors h-fit"
                 disabled={loading}
               >
                 {loading ? "Submitting..." : "Enquire"}
@@ -119,7 +119,7 @@ const Footer = () => {
                 id="consent"
                 checked={consentChecked}
                 onChange={(e) => setConsentChecked(e.target.checked)}
-                className="mt-1 w-4 h-4 accent-[#997736] cursor-pointer"
+                className="mt-1 w-4 h-4 accent-[#003153] cursor-pointer"
                 required
               />
               <label
@@ -144,14 +144,14 @@ const Footer = () => {
           {/* Mobile/Tablet Footer */}
           <div className="lg:hidden flex flex-col items-center space-y-4">
             <h2 className="text-white text-2xl font-bold">ENQUIRE NOW</h2>
-            <form onSubmit={handleFormSubmit} className="w-full space-y-4 pb-20">
+            <form onSubmit={handleFormSubmit} className="w-full space-y-4 pb-8">
               <div className="flex flex-col">
                 <label className="text-white mb-1 text-sm font-medium">Name</label>
                 <input
                   type="text"
                   name="name"
                   placeholder="Enter your name"
-                  className="h-[48px] w-full p-3 rounded-lg bg-white border border-gray-300 focus:border-[#997736] outline-none"
+                  className="h-[48px] w-full p-3 rounded-lg bg-white border-2 border-[#003153] focus:border-[#003153] outline-none"
                   required
                 />
               </div>
@@ -171,7 +171,7 @@ const Footer = () => {
                   containerClass="w-full "   // ✅ relative so dropdown positions properly
                   // inputClass="!w-full !h-[48px] !pl-12 !pr-3 !rounded-lg !bg-white !text-black !border !border-gray-300 focus:!border-[#997736] !outline-none placeholder:!text-gray-400"
                   // buttonClass="!h-[48px] !flex !items-center !justify-center !bg-gray-200 !border-none !rounded-l-lg !px-1"
-                  inputClass="!w-full !bg-white !text-black !py-3 !pl-12 !pr-3 !rounded-md !border !border-gray-300 focus:!border-[#997736] !outline-none"
+                  inputClass="!w-full !bg-white !text-black !py-3 !pl-12 !pr-3 !rounded-md !border-2 !border-[#003153] focus:!border-[#003153] !outline-none"
                   buttonClass="!bg-gray-800 !border-none !rounded-l-md !bg-gray-200"
                   dropdownClass="!bg-white !text-black "   // ✅ keep dropdown above !z-[9999] !absolute
                   searchClass="!bg-white !text-black"
@@ -189,7 +189,7 @@ const Footer = () => {
                   type="email"
                   name="email"
                   placeholder="Enter your email"
-                  className="h-[48px] w-full p-3 rounded-lg bg-white border border-gray-300 focus:border-[#997736] outline-none"
+                  className="h-[48px] w-full p-3 rounded-lg bg-white border-2 border-[#003153] focus:border-[#003153] outline-none"
                   // required
                 />
               </div>
@@ -200,7 +200,7 @@ const Footer = () => {
                   id="consent"
                   checked={consentChecked}
                   onChange={(e) => setConsentChecked(e.target.checked)}
-                  className="mt-0.5 w-4 h-4 accent-[#997736] cursor-pointer"
+                  className="mt-0.5 w-4 h-4 accent-[#003153] cursor-pointer"
                   required
                 />
                 <label
@@ -223,7 +223,7 @@ const Footer = () => {
 
               <button
                 type="submit"
-                className="w-full bg-[#b38e5d] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#a07e4d] transition-colors"
+                className="bg-[#003153] w-full text-lg text-[#ffffff] border-2 border-white px-8 py-2.5 rounded-lg font-bold hover:text-[#003153] hover:bg-white transition-colors h-fit"
                 disabled={loading}
               >
                 {loading ? "Submitting..." : "Enquire"}
@@ -234,7 +234,7 @@ const Footer = () => {
       </footer>
 
       {/* Fixed Mobile Footer Buttons */}
-      <div className="fixed bottom-0 left-0 w-full bg-[#997736] shadow-md lg:hidden z-50">
+      {/* <div className="fixed bottom-0 left-0 w-full bg-[#997736] shadow-md lg:hidden z-50">
         <div className="flex justify-around w-full p-2 space-x-2">
           <button onClick={openModal} className="flex-1 flex flex-col items-center p-2 rounded-lg bg-[#b38e5d] text-white hover:bg-[#a07e4d] transition-colors">
             <i className="fas fa-phone-alt text-lg transform rotate-90"></i>
@@ -249,7 +249,7 @@ const Footer = () => {
             <span className="text-sm mt-1">WHATSAPP</span>
           </button>
         </div>
-      </div>
+      </div> */}
 
       {success && (
         <div className="alert-modal fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
