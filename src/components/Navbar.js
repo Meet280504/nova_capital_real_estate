@@ -86,14 +86,14 @@ export default function Navbar() {
             <div className="hidden md:flex items-center gap-6 font-medium">
               {' '}
               {[
-                { href: '/', label: 'HOME' },
-                { href: '#about', label: 'ABOUT US' },
-                { href: '/pricing', label: 'PROPERTY' },
-                { href: '/new-projects', label: 'NEW PROJECTS' },
-                { href: '/areas', label: 'AREAS' },
-                { href: '/developer', label: 'DEVELOPERS' },
-                { href: '/services', label: 'SERVICES' },
-                { href: '/contact', label: 'CONTACT US' },
+              { href: '/', label: 'Home' },
+              { href: '/about', label: 'About Us' },
+              { href: '/pricing', label: 'Property' },
+              { href: '/new-projects', label: 'New Projects' },
+              { href: '/areas', label: 'Areas' },
+              { href: '/developer', label: 'Developers' },
+              { href: '/services', label: 'Services' },
+              { href: '/contact', label: 'Contact Us' },
               ].map((item) => (
                 <a
                   key={item.href}
@@ -151,17 +151,17 @@ export default function Navbar() {
           className={`fixed inset-0 z-40 bg-white transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
             } lg:hidden p-8 pt-16`}
         >
-          <div className="flex flex-col space-y-4 text-xl text-[#003153] text-center font-semibold">
+          <div className="flex flex-col space-y-4 text-xl text-[#003153] text-center font-medium">
             {' '}
             {[
-              { href: '/', label: 'HOME' },
-              { href: '#about', label: 'ABOUT US' },
-              { href: '/pricing', label: 'PROPERTY' },
-              { href: '/new-projects', label: 'NEW PROJECTS' },
-              { href: '/areas', label: 'AREAS' },
-              { href: '/developer', label: 'DEVELOPERS' },
-              { href: '/services', label: 'SERVICES' },
-              { href: '/contact', label: 'CONTACT US' },
+              { href: '/', label: 'Home' },
+              { href: '/about', label: 'About Us' },
+              { href: '/pricing', label: 'Property' },
+              { href: '/new-projects', label: 'New Projects' },
+              { href: '/areas', label: 'Areas' },
+              { href: '/developer', label: 'Developers' },
+              { href: '/services', label: 'Services' },
+              { href: '/contact', label: 'Contact Us' },
             ].map((item) => (
               <a
                 key={item.href}

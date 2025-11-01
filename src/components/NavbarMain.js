@@ -64,7 +64,7 @@ export default function NavbarMain() {
         referrerPolicy="no-referrer"
       />
       <nav
-        className={`fixed top-0 left-0 w-full z-50 font-bold transition-all duration-300 ${isScrolled
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
           ? 'bg-white shadow-md text-[#003153]'
           : 'bg-transparent text-white'
           }`}
@@ -86,14 +86,14 @@ export default function NavbarMain() {
             <div className="hidden md:flex items-center gap-6 font-medium">
               {' '}
               {[
-                { href: '/', label: 'HOME' },
-                { href: '#about', label: 'ABOUT US' },
-                { href: '/pricing', label: 'PROPERTY' },
-                { href: '/new-projects', label: 'NEW PROJECTS' },
-                { href: '/areas', label: 'AREAS' },
-                { href: '/developer', label: 'DEVELOPERS' },
-                { href: '/services', label: 'SERVICES' },
-                { href: '/contact', label: 'CONTACT US' },
+              { href: '/', label: 'Home' },
+              { href: '/about', label: 'About Us' },
+              { href: '/pricing', label: 'Property' },
+              { href: '/new-projects', label: 'New Projects' },
+              { href: '/areas', label: 'Areas' },
+              { href: '/developer', label: 'Developers' },
+              { href: '/services', label: 'Services' },
+              { href: '/contact', label: 'Contact Us' },
               ].map((item) => (
                 <a
                   key={item.href}
@@ -154,14 +154,14 @@ export default function NavbarMain() {
           <div className="flex flex-col space-y-4 text-xl text-[#003153] text-center font-semibold">
             {' '}
             {[
-              { href: '/', label: 'HOME' },
-              { href: '#about', label: 'ABOUT US' },
-              { href: '/pricing', label: 'PROPERTY' },
-              { href: '/new-projects', label: 'NEW PROJECTS' },
-              { href: '/areas', label: 'AREAS' },
-              { href: '/developer', label: 'DEVELOPERS' },
-              { href: '/services', label: 'SERVICES' },
-              { href: '/contact', label: 'CONTACT US' },
+              { href: '/', label: 'Home' },
+              { href: '/about', label: 'About Us' },
+              { href: '/pricing', label: 'Property' },
+              { href: '/new-projects', label: 'New Projects' },
+              { href: '/areas', label: 'Areas' },
+              { href: '/developer', label: 'Developers' },
+              { href: '/services', label: 'Services' },
+              { href: '/contact', label: 'Contact Us' },
             ].map((item) => (
               <a
                 key={item.href}

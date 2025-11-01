@@ -4,11 +4,12 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import FirstTimeBuyer from "./Homebuyer";
 import SEO from "./SEO";
+import { useNavigate } from "react-router-dom";
 
 const properties = [
   {
     id: 1,
-    image: "../Assets/banner1.webp",
+    image: "../Assets/op1.webp",
     price: "2,271,180 AED",
     beds: 1,
     baths: 2,
@@ -20,7 +21,7 @@ const properties = [
   },
   {
     id: 2,
-    image: "../Assets/banner2.webp",
+    image: "../Assets/op2.webp",
     price: "5,758,303 AED",
     beds: 2,
     baths: 3,
@@ -32,7 +33,7 @@ const properties = [
   },
   {
     id: 3,
-    image: "../Assets/banner3.webp",
+    image: "../Assets/op3.webp",
     price: "1,200,000 AED",
     beds: "Studio",
     baths: 1,
@@ -44,7 +45,7 @@ const properties = [
   },
   {
     id: 4,
-    image: "../Assets/banner4.webp",
+    image: "../Assets/op4.webp",
     price: "3,450,000 AED",
     beds: 3,
     baths: 3,
@@ -56,7 +57,7 @@ const properties = [
   },
   {
     id: 5,
-    image: "../Assets/gallery1.webp",
+    image: "../Assets/op5.webp",
     price: "2,250,100 AED",
     beds: 1,
     baths: 2,
@@ -68,7 +69,7 @@ const properties = [
   },
   {
     id: 6,
-    image: "../Assets/gallery2.webp",
+    image: "../Assets/op6.webp",
     price: "5,750,050 AED",
     beds: 2,
     baths: 3,
@@ -82,6 +83,12 @@ const properties = [
 
 export default function PropertyCarousel() {
   const { openModal } = useEnquiryModal();
+  const navigate = useNavigate();
+
+  const handleCardClick = (property) => {
+    navigate(`/new-projects/${property.id}`, { state: property });
+  };
+
   return (
     <>
       <SEO
@@ -105,7 +112,7 @@ export default function PropertyCarousel() {
         {/* Responsive Property Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {properties.map((p) => (
-            <div key={p.id} className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+            <div key={p.id} onClick={() => handleCardClick(p)} className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition">
               <div className="relative">
                 <img
                   src={p.image}

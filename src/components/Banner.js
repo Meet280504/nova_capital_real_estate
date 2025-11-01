@@ -7,6 +7,9 @@ import PricingComponent from "./PricingComponent";
 import OffPlanComponent from "./OffPlanComponent";
 import PopularSearches from "./PopularSearches";
 import SEO from "./SEO";
+import AreaComponent from "./AreaComponent";
+import AboutUs from "./AboutUsComponent";
+import ReviewCarousel from "./ReviewCarousel";
 
 export default function HomePage() {
   const [activeTab, setActiveTab] = useState("Buy");
@@ -35,7 +38,7 @@ export default function HomePage() {
           <source src="../Assets/banner2.mp4" type="video/mp4" />
         </video> */}
         <img
-          src="../Assets/banner1.webp"
+          src="../Assets/area1.webp"
           alt="Banner"
           className="absolute inset-0 w-full h-full object-cover transform"
         />
@@ -146,8 +149,11 @@ export default function HomePage() {
       </section>
       <PricingComponent />
       <OffPlanComponent />
-      <PopularSearches />
+      <AreaComponent />
+      <AboutUs />
+      <ReviewCarousel />
       <FirstTimeBuyer />
+      <PopularSearches />
       <Footer />
     </>
   );

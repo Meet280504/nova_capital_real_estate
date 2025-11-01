@@ -1,5 +1,8 @@
 import React from "react";
 import SEO from "./SEO";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import FirstTimeBuyer from "./Homebuyer";
 
 const areas = [
     { id: 1, name: "Palm Jebel Ali", price: "From 1.9M AED", img: "./Assets/masterplan.jpg" },
@@ -20,20 +23,21 @@ const PopularAreas = () => {
                 canonical="http://localhost:3000/areas"
                 keywords="best family neighborhoods dubai, affordable housing options sharjah families, villas close to ibn battuta mall"
             />
-            <div id="areas" className="py-10 container mx-auto bg-white">
-                <div className="max-w-7xl mx-auto px-4">
-                    <div className="flex justify-between items-center gap-4 mb-6">
+            <Navbar />
+            <div id="areas" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28">
+                {/* <div className="max-w-7xl mx-auto px-4"> */}
+                    <div className="flex flex-col sm:flex-row justify-between items-center md:mb-6 mb-4">
                         <h2 className="md:text-4xl text-2xl text-black font-bold">Popular Areas in Dubai</h2>
-                        <button className="border-2 text-[#0B2B4C] text-md border-[#0B2B4C] px-4 py-2 font-semibold rounded-lg hover:bg-[#0B2B4C] hover:text-white transition">
+                        {/* <button className="border-2 text-[#0B2B4C] text-md border-[#0B2B4C] px-4 py-2 font-semibold rounded-lg hover:bg-[#0B2B4C] hover:text-white transition">
                             Show All Areas
-                        </button>
+                        </button> */}
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
                         {/* Large Left Card */}
                         <div className="md:col-span-2">
                             <div className="relative overflow-hidden rounded-xl group cursor-pointer h-full">
                                 <img
-                                    src="./Assets/masterplan.jpg"
+                                    src="./Assets/area1.webp"
                                     alt="Masterplan"
                                     className="w-full h-64 md:h-80 lg:h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
@@ -48,7 +52,7 @@ const PopularAreas = () => {
                         {/* Card 2 */}
                         <div className="relative overflow-hidden rounded-xl group cursor-pointer h-full">
                             <img
-                                src="./Assets/gallery3.webp"
+                                src="./Assets/area2.jpg"
                                 alt="Dubai Marina"
                                 className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                             />
@@ -62,7 +66,7 @@ const PopularAreas = () => {
                         {/* Card 3 */}
                         <div className="relative overflow-hidden rounded-xl group cursor-pointer h-full">
                             <img
-                                src="./Assets/gallery2.webp"
+                                src="./Assets/area3.jpg"
                                 alt="Downtown Dubai"
                                 className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                             />
@@ -77,7 +81,7 @@ const PopularAreas = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mb-6">
                         <div className="relative overflow-hidden rounded-xl group cursor-pointer h-full">
                             <img
-                                src="./Assets/gallery4.webp"
+                                src="./Assets/area4.jpg"
                                 alt="Dubai Marina"
                                 className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                             />
@@ -89,7 +93,7 @@ const PopularAreas = () => {
                         </div>
                         <div className="relative overflow-hidden rounded-xl group cursor-pointer h-full">
                             <img
-                                src="./Assets/gallery5.webp"
+                                src="./Assets/area5.webp"
                                 alt="Dubai Marina"
                                 className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                             />
@@ -101,7 +105,7 @@ const PopularAreas = () => {
                         </div>
                         <div className="relative overflow-hidden rounded-xl group cursor-pointer h-full">
                             <img
-                                src="./Assets/gallery6.webp"
+                                src="./Assets/area6.jpg"
                                 alt="Dubai Marina"
                                 className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                             />
@@ -113,7 +117,7 @@ const PopularAreas = () => {
                         </div>
                         <div className="relative overflow-hidden rounded-xl group cursor-pointer h-full">
                             <img
-                                src="./Assets/gallery7.webp"
+                                src="./Assets/area7.jpg"
                                 alt="Dubai Marina"
                                 className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                             />
@@ -124,8 +128,10 @@ const PopularAreas = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                {/* </div> */}
             </div>
+            <FirstTimeBuyer />
+            <Footer />
         </>
     );
 };

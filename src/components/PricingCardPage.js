@@ -30,7 +30,7 @@ export default function CardPage() {
                 image={`http://localhost:3000${property.image}`}
             />
             <Navbar />
-            <div className="lg:p-20 p-4 mt-10 -mb-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28">
                 <div className="container justify-between items-center">
                     {/* Breadcrumb */}
                     <div className="flex space-x-2 text-[#003153]">
@@ -157,7 +157,7 @@ export default function CardPage() {
                     </div>
                 </div>
             </div>
-            <PricingComponent />
+            {/* <PricingComponent /> */}
             <FirstTimeBuyer />
             <Footer />
         </>

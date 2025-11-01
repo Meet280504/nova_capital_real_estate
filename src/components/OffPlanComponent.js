@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 const properties = [
     {
         id: 1,
-        image: "../Assets/banner1.webp",
+        image: "../Assets/op1.webp",
         price: "2,271,180 AED",
         beds: 1,
         baths: 2,
@@ -21,7 +21,7 @@ const properties = [
     },
     {
         id: 2,
-        image: "../Assets/banner2.webp",
+        image: "../Assets/op2.webp",
         price: "5,758,303 AED",
         beds: 2,
         baths: 3,
@@ -33,7 +33,7 @@ const properties = [
     },
     {
         id: 3,
-        image: "../Assets/banner3.webp",
+        image: "../Assets/op3.webp",
         price: "1,200,000 AED",
         beds: "Studio",
         baths: 1,
@@ -45,7 +45,7 @@ const properties = [
     },
     {
         id: 4,
-        image: "../Assets/banner4.webp",
+        image: "../Assets/op4.webp",
         price: "3,450,000 AED",
         beds: 3,
         baths: 3,
@@ -62,72 +62,74 @@ export default function OffPlanComponent() {
     const navigate = useNavigate();
     return (
         <>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-0 sm:pb-6">
-                {/* Header Section */}
-                <div className="flex sm:flex-row justify-between gap-4 md:mb-6 mb-4">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#000000] text-start sm:text-left">
-                        Off Plan Latest Launches
-                    </h2>
-                    <button onClick={() => navigate("/new-projects")} className="border-2 items-end border-[#0B1A3C] px-5 py-2 text-[#003153] rounded-lg text-md font-semibold hover:text-white hover:bg-[#003153] transition">
-                        Explore off plan projects
-                    </button>
-                </div>
+            <section className="bg-[#ffffff] py-0 lg:py-0 px-4">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
+                    {/* Header Section */}
+                    <div className="flex sm:flex-row justify-between gap-4 md:mb-6 mb-4">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#000000] text-start sm:text-left">
+                            Off Plan Latest Launches
+                        </h2>
+                        <button onClick={() => navigate("/new-projects")} className="border-2 items-end border-[#0B1A3C] px-5 py-2 text-[#003153] rounded-lg text-md font-semibold hover:text-white hover:bg-[#003153] transition">
+                            Explore off plan projects
+                        </button>
+                    </div>
 
-                {/* Responsive Property Grid */}
-                <Swiper
-                    modules={[Autoplay, Pagination]}
-                    autoplay={{ delay: 3000, disableOnInteraction: false }}
-                    loop={true}
-                    pagination={{ clickable: true }}
-                    spaceBetween={20}
-                    breakpoints={{
-                        0: { slidesPerView: 1 },
-                        768: { slidesPerView: 2 },
-                        1024: { slidesPerView: 3 },
-                    }}
-                >
-                    {properties.map((p) => (
-                        <SwiperSlide key={p.id}>
-                            <div className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-                                <div className="relative">
-                                    <img
-                                        src={p.image}
-                                        alt={p.title}
-                                        className="w-full h-52 sm:h-56 md:h-64 object-cover hover:scale-105 transition-transform duration-300"
-                                    />
-                                    <div className="absolute top-2 left-2 flex flex-wrap gap-2">
-                                        <span className="bg-[#003153] text-white text-[10px] sm:text-xs font-semibold px-2 py-1 rounded">
-                                            Off-Plan
-                                        </span>
-                                        <span className="bg-white text-[#003153] text-[10px] sm:text-xs font-semibold px-2 py-1 rounded">
-                                            Delivery: Q1 2029
-                                        </span>
+                    {/* Responsive Property Grid */}
+                    <Swiper
+                        modules={[Autoplay, Pagination]}
+                        autoplay={{ delay: 3000, disableOnInteraction: false }}
+                        loop={true}
+                        pagination={{ clickable: true }}
+                        spaceBetween={20}
+                        breakpoints={{
+                            0: { slidesPerView: 1 },
+                            768: { slidesPerView: 2 },
+                            1024: { slidesPerView: 3 },
+                        }}
+                    >
+                        {properties.map((p) => (
+                            <SwiperSlide key={p.id}>
+                                <div className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+                                    <div className="relative">
+                                        <img
+                                            src={p.image}
+                                            alt={p.title}
+                                            className="w-full h-52 sm:h-56 md:h-64 object-cover hover:scale-105 transition-transform duration-300"
+                                        />
+                                        <div className="absolute top-2 left-2 flex flex-wrap gap-2">
+                                            <span className="bg-[#003153] text-white text-[10px] sm:text-xs font-semibold px-2 py-1 rounded">
+                                                Off-Plan
+                                            </span>
+                                            <span className="bg-white text-[#003153] text-[10px] sm:text-xs font-semibold px-2 py-1 rounded">
+                                                Delivery: Q1 2029
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div className="p-4 sm:p-5">
+                                        <h3 className="text-[#003153] font-bold text-lg sm:text-xl mb-2">
+                                            {p.price}
+                                        </h3>
+                                        <p className="text-sm sm:text-base font-medium leading-snug mb-1">
+                                            {p.title}
+                                        </p>
+                                        <p className="text-sm text-gray-700 flex items-center gap-1">
+                                            <i className="fa-solid fa-location-dot text-[#003153]"></i>
+                                            {p.location}
+                                        </p>
+                                        <button
+                                            onClick={openModal}
+                                            className="w-full bg-[#003153] text-white font-semibold py-2 mt-4 rounded-lg text-sm sm:text-md hover:bg-[#003153]/90 transition"
+                                        >
+                                            Enquire Now
+                                        </button>
                                     </div>
                                 </div>
-
-                                <div className="p-4 sm:p-5">
-                                    <h3 className="text-[#003153] font-bold text-lg sm:text-xl mb-2">
-                                        {p.price}
-                                    </h3>
-                                    <p className="text-sm sm:text-base font-medium leading-snug mb-1">
-                                        {p.title}
-                                    </p>
-                                    <p className="text-sm text-gray-700 flex items-center gap-1">
-                                        <i className="fa-solid fa-location-dot text-[#003153]"></i>
-                                        {p.location}
-                                    </p>
-                                    <button
-                                        onClick={openModal}
-                                        className="w-full bg-[#003153] text-white font-semibold py-2 mt-4 rounded-lg text-sm sm:text-md hover:bg-[#003153]/90 transition"
-                                    >
-                                        Enquire Now
-                                    </button>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
+            </section>
         </>
     );
 }

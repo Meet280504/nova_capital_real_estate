@@ -10,7 +10,7 @@ import FirstTimeBuyer from "./Homebuyer";
 const properties = [
   {
     id: 1,
-    image: "../Assets/gallery3.webp",
+    image: "../Assets/c1.webp",
     price: "2,271,180 AED",
     beds: 1,
     baths: 2,
@@ -22,7 +22,7 @@ const properties = [
   },
   {
     id: 2,
-    image: "../Assets/gallery4.webp",
+    image: "../Assets/c2.webp",
     price: "5,758,303 AED",
     beds: 2,
     baths: 3,
@@ -34,7 +34,7 @@ const properties = [
   },
   {
     id: 3,
-    image: "../Assets/gallery5.webp",
+    image: "../Assets/c3.webp",
     price: "1,200,000 AED",
     beds: "Studio",
     baths: 1,
@@ -46,7 +46,7 @@ const properties = [
   },
   {
     id: 4,
-    image: "../Assets/gallery6.webp",
+    image: "../Assets/c4.webp",
     price: "3,450,000 AED",
     beds: 3,
     baths: 3,
@@ -58,7 +58,7 @@ const properties = [
   },
   {
     id: 5,
-    image: "../Assets/gallery7.webp",
+    image: "../Assets/c5.webp",
     price: "2,151,200 AED",
     beds: 2,
     baths: 3,
@@ -70,7 +70,7 @@ const properties = [
   },
   {
     id: 6,
-    image: "../Assets/gallery2.webp",
+    image: "../Assets/c6.webp",
     price: "4,750,300 AED",
     beds: 3,
     baths: 4,

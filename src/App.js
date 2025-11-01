@@ -13,7 +13,9 @@ import FirstTimeBuyer from "./components/Homebuyer";
 import Developer from "./components/Developer";
 import Contact from "./components/Contact";
 import CardPage from "./components/PricingCardPage";
+import OffPlanCardPage from "./components/OffPlanCardPage";
 import "./App.css";
+import About from "./components/About";
 
 // DemoButton to test modal anywhere
 // function DemoButton() {
@@ -56,12 +58,14 @@ function App() {
           <Route path="/" element={<Banner />} />
           <Route path="/pricing" element={<PriceSection />} />
           <Route path="/property/:id" element={<CardPage />} />
+          <Route path="/new-projects/:id" element={<OffPlanCardPage />} />
           <Route path="/new-projects" element={<OffPlanProjects />} />
           <Route path="/areas" element={<Areas />} />
           <Route path="/developer" element={<Developer />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/thankyou.html" element={<ThankYouPage />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       {/* </Router>/ */}
     </EnquiryModalProvider>
